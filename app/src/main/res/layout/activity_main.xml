@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/teamAplusOneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="220dp"
+        android:onClick="onClickTeamA"
+        android:text="+1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamA"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/teamBplusOneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="220dp"
+        android:onClick="onClickTeamB"
+        android:text="+1"
+        app:layout_constraintStart_toEndOf="@+id/teamAplusOneButton"
+        app:layout_constraintTop_toBottomOf="@+id/teamB"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Switch"
+        app:layout_constraintStart_toEndOf="@+id/switchInfo"
+        app:layout_constraintTop_toBottomOf="@+id/teamB"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <EditText
+        android:id="@+id/switchInfo"
+        android:layout_width="250dp"
+        android:layout_height="56dp"
+        android:editable="false"
+
+
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Switch for Team B"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamA"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/teamA"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp" />
+
+    <EditText
+        android:id="@+id/teamB"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:editable="false"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/teamA"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

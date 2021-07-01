@@ -6,26 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--    <Switch-->
+<!--        android:id="@+id/switch1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="Switch"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/switchInfo"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/teamB"-->
+<!--        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/switchInfo"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:layout_marginTop="20dp"-->
+
+
+<!--        android:editable="false"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:text="Switch for Team B"-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/teamA"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <EditText
+        android:id="@+id/labelHeader"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="SCORE KEEPER FOR CRICKET"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="16dp"
         android:text="TEAM B"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/labelHeader" />
+
+    <EditText
+        android:id="@+id/labelSingles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Select +1 or +3 button for the runs taken by running between the wickets"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/labelHeader"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/teamAplusOneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
         android:onClick="onClickTeamA"
         android:text="+1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamA"
+        app:layout_constraintTop_toBottomOf="@+id/labelSingles"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -33,9 +88,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:onClick="onClickTeamA"
-        android:text="-1"
+        android:text="+3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teamAplusOneButton"
         tools:ignore="MissingConstraints" />
@@ -44,74 +99,65 @@
         android:id="@+id/teamBplusOneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="48dp"
         android:onClick="onClickTeamB"
         android:text="+1"
         app:layout_constraintStart_toEndOf="@+id/teamAplusOneButton"
-        app:layout_constraintTop_toBottomOf="@+id/teamB"
+        app:layout_constraintTop_toBottomOf="@+id/labelSingles"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/teamBminusOneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
         android:onClick="onClickTeamB"
-        android:text="-1"
+        android:text="+3"
         app:layout_constraintStart_toEndOf="@+id/teamAminusOneButton"
         app:layout_constraintTop_toBottomOf="@+id/teamBplusOneButton"
-        tools:ignore="MissingConstraints" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
-        android:text="Switch"
-        app:layout_constraintStart_toEndOf="@+id/switchInfo"
-        app:layout_constraintTop_toBottomOf="@+id/teamB"
-        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
-
-    <EditText
-        android:id="@+id/switchInfo"
-        android:layout_width="250dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-
-
-        android:editable="false"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Switch for Team B"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teamA"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/teamA"
         android:layout_width="74dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:editable="false"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:text="172"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="43dp" />
+        tools:layout_editor_absoluteX="60dp" />
+
+    <!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="149dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.502"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.498" />-->
 
     <EditText
         android:id="@+id/teamB"
         android:layout_width="74dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
         android:editable="false"
         android:ems="10"
+
         android:inputType="numberDecimal"
+        android:text="189"
         app:layout_constraintStart_toEndOf="@+id/teamA"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingConstraints" />
@@ -120,25 +166,28 @@
         android:id="@+id/textView"
         android:layout_width="57dp"
         android:layout_height="21dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:text="TEAM A"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelHeader"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="60dp" />
 
     <RadioGroup
         android:id="@+id/radioGroupTeamA"
         android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="385dp">
+        android:layout_height="214dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/teamAminusOneButton"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
 
         <EditText
             android:id="@+id/boundariesViewTeamA"
-            android:layout_width="match_parent"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Boundaries"
+            android:text="Boundaries Team A"
             android:textSize="12dp"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="516dp" />
@@ -177,25 +226,28 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="56"
             android:textSize="12dp"
-            android:text="Total Score by Boundaries"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="516dp" />
-
 
 
     </RadioGroup>
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="374dp">
+        android:layout_width="158dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/radioGroupTeamA"
+        app:layout_constraintTop_toBottomOf="@+id/teamBminusOneButton"
+        tools:ignore="MissingConstraints">
+
 
         <EditText
             android:id="@+id/boundariesViewTeamB"
-            android:layout_width="match_parent"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -203,7 +255,6 @@
             android:textSize="12dp"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="516dp" />
-
 
         <RadioButton
             android:id="@+id/rdoBtnFourTeamB"
@@ -238,8 +289,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="72"
             android:textSize="12dp"
-            android:text="Total Score by Boundaries"
             tools:layout_editor_absoluteX="206dp"
             tools:layout_editor_absoluteY="516dp" />
 

@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
             TextView tv2 = (TextView)findViewById(R.id.teamB);
             tv2.setEnabled(false);
 
-            TextView tv3 = (TextView)findViewById(R.id.switchInfo);
-            tv3.setEnabled(false);
+//            TextView tv3 = (TextView)findViewById(R.id.switchInfo);
+//            tv3.setEnabled(false);
 
 
         }

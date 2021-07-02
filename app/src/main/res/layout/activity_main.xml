@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:onClick="onClickTeamA"
         android:text="+1"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,8 +99,8 @@
         android:id="@+id/teamBplusOneButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
         android:onClick="onClickTeamB"
         android:text="+1"
         app:layout_constraintStart_toEndOf="@+id/teamAplusOneButton"
@@ -119,19 +119,6 @@
         app:layout_constraintTop_toBottomOf="@+id/teamBplusOneButton"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/teamA"
-        android:layout_width="74dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="172"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp" />
-
     <!--    <Spinner-->
 <!--        android:id="@+id/spinner"-->
 <!--        android:layout_width="149dp"-->
@@ -146,6 +133,20 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.498" />-->
+
+    <EditText
+        android:id="@+id/teamA"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="172"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/teamB"
@@ -164,26 +165,28 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="57dp"
-        android:layout_height="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="16dp"
         android:text="TEAM A"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelHeader"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="60dp" />
+        tools:ignore="MissingConstraints" />
 
     <RadioGroup
         android:id="@+id/radioGroupTeamA"
-        android:layout_width="150dp"
-        android:layout_height="214dp"
+        android:layout_width="140dp"
+        android:layout_height="258dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teamAminusOneButton"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp">
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/boundariesViewTeamA"
-            android:layout_width="140dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -206,6 +209,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Six"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="595dp" />
+
+        <Button
+            android:id="@+id/teamAaddBoundaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="62dp"
             tools:layout_editor_absoluteY="595dp" />
 
@@ -236,8 +248,8 @@
 
     <RadioGroup
         android:id="@+id/radioGroup2"
-        android:layout_width="158dp"
-        android:layout_height="204dp"
+        android:layout_width="140dp"
+        android:layout_height="255dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toEndOf="@+id/radioGroupTeamA"
@@ -247,7 +259,7 @@
 
         <EditText
             android:id="@+id/boundariesViewTeamB"
-            android:layout_width="140dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -271,6 +283,16 @@
             android:text="Six"
             tools:layout_editor_absoluteX="62dp"
             tools:layout_editor_absoluteY="595dp" />
+
+        <Button
+            android:id="@+id/teamBaddBoundaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="ADD"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="595dp"
+            tools:ignore="MissingConstraints" />
 
         <EditText
             android:id="@+id/totalByBoundariesLabelTeamB"

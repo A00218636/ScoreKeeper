@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
+            //TO FADE THE VIEWS ON LOAD
             TextView tv = (TextView)findViewById(R.id.teamA);
             tv.setEnabled(false);
 

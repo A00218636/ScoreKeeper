@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScoreKeeper">
-        <activity android:name=".MainActivity">
+<!--        <activity android:name=".MainActivity">-->
+<!--            &lt;!&ndash;  <intent-filter>-->
+<!--              <action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </intent-filter>&ndash;&gt;-->
+<!--        </activity>-->
+
+        <activity android:name="com.example.scorekeeper.FragmentSample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

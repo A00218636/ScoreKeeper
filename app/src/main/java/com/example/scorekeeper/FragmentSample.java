@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 public class FragmentSample extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
